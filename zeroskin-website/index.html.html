@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEROSKIN | Soft Skin for Real Robots</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #020617; color: #f8fafc; font-family: 'Inter', 'Microsoft JhengHei', sans-serif; scroll-behavior: smooth; }
+        .section-darker { background-color: #010409; }
+        .accent-blue { color: #3b82f6; }
+        .text-silver { color: #94a3b8; }
+        .border-subtle { border-color: rgba(255, 255, 255, 0.1); }
+        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); }
+        .grid-img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; }
+        .lang-btn { cursor: pointer; transition: 0.3s; padding: 2px 8px; border-radius: 4px; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
+        .lang-active { color: #3b82f6; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav class="flex justify-between items-center p-6 border-b border-subtle sticky top-0 bg-[#020617]/90 backdrop-blur-md z-50">
+        <div class="flex items-center">
+            <img src="logo.png" alt="ZEROSKIN" class="h-10 md:h-12 brightness-200">
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="text-xs flex gap-2 border-r border-white/10 pr-6">
+                <span id="btn-en" onclick="setLang('en')" class="lang-btn lang-active">EN</span>
+                <span id="btn-zh" onclick="setLang('zh')" class="lang-btn">繁</span>
+            </div>
+            <a href="#contact" id="nav-contact" class="bg-white text-[#020617] px-6 py-2 rounded-full text-sm font-bold hover:bg-blue-100 transition">Contact Us</a>
+        </div>
+    </nav>
+
+    <section class="py-24 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h1 id="hero-title" class="text-6xl md:text-7xl font-black leading-none mb-6 text-white">Soft Skin for <br><span class="accent-blue">Real Robots</span></h1>
+            <p id="hero-sub" class="text-xl text-silver mb-8">Hong Kong Premium Humanoid Robot Bionic Skin Solution Provider.</p>
+            <div class="flex gap-4">
+                <span id="tag-1" class="px-4 py-2 glass-card rounded-lg text-xs font-bold uppercase tracking-widest text-blue-400">Bio Tech</span>
+                <span id="tag-2" class="px-4 py-2 glass-card rounded-lg text-xs font-bold uppercase tracking-widest text-blue-400">One-Stop Service</span>
+            </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+            <img src="hero-robot.jpg" alt="Humanoid Robot Bionic Skin" class="w-full">
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="order-2 md:order-1 grid grid-cols-2 gap-4">
+            <img src="texture-1.jpg" alt="Texture 1" class="grid-img">
+            <img src="texture-2.jpg" alt="Texture 2" class="grid-img">
+            <img src="texture-3.jpg" alt="Texture 3" class="grid-img">
+            <img src="texture-4.jpg" alt="Texture 4" class="grid-img">
+        </div>
+        <div class="order-1 md:order-2">
+            <h2 id="partner-title" class="text-4xl font-black mb-6 text-white">Exclusive Strategic Partnership</h2>
+            <p id="partner-desc" class="text-lg text-silver mb-6">ZEROSKIN maintains an exclusive global strategic partnership with <strong>Zelex</strong>, a leading silicone factory specializing in biomimetic technology.</p>
+            <ul class="space-y-4 text-slate-300">
+                <li id="list-1" class="flex items-start gap-3">✓ Mature highly realistic silicone facial fabrication technology.</li>
+                <li id="list-2" class="flex items-start gap-3">✓ End-to-end customization from prototype to mass production.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="py-20 section-darker px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 id="specs-title" class="text-4xl font-black mb-12 text-white text-center">Technical Specifications</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div class="p-8 glass-card rounded-2xl">
+                    <h4 id="spec-h1" class="text-xs uppercase tracking-widest text-blue-400 mb-2 font-bold">Hardness</h4>
+                    <p class="text-2xl font-mono text-white">00-10 ~ 00-30 Shore</p>
+                </div>
+                <div class="p-8 glass-card rounded-2xl">
+                    <h4 id="spec-h2" class="text-xs uppercase tracking-widest text-blue-400 mb-2 font-bold">Temperature</h4>
+                    <p class="text-2xl font-mono text-white">-20°C ~ 220°C</p>
+                </div>
+                <div class="p-8 glass-card rounded-2xl">
+                    <h4 id="spec-h3" class="text-xs uppercase tracking-widest text-blue-400 mb-2 font-bold">Thickness</h4>
+                    <p class="text-2xl font-mono text-white">0.5mm - 2.0mm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="glass-card rounded-[3rem] p-8 md:p-16 grid md:grid-cols-2 gap-12 items-center border-blue-500/20">
+            <div>
+                <span id="case-tag" class="bg-blue-600 text-white px-3 py-1 text-[10px] font-bold uppercase rounded">Success Case</span>
+                <h2 id="case-title" class="text-5xl font-black mt-4 mb-6 text-white">AnyWit Robotics</h2>
+                <p id="case-desc" class="text-silver mb-6">We provided professional silicone skin solutions for high-degree-of-freedom facial expressions, proving our delivery capability for complex humanoid robots.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="anywit-1.jpg" alt="Case 1" class="grid-img">
+                <img src="anywit-2.jpg" alt="Case 2" class="grid-img">
+                <img src="anywit-3.jpg" alt="Case 3" class="grid-img">
+                <img src="anywit-4.jpg" alt="Case 4" class="grid-img">
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-24 section-darker px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="text-left">
+                <img src="logo.png" alt="ZEROSKIN" class="h-12 mb-8 brightness-200">
+                <h2 id="footer-contact" class="text-4xl font-black mb-6 text-white">Contact</h2>
+                <a href="mailto:contact@zeroskin.co" class="text-2xl font-light text-blue-400 hover:text-white transition underline underline-offset-8 decoration-1 decoration-blue-500/30">
+                    contact@zeroskin.co
+                </a>
+                <div class="mt-12 space-y-2 text-silver text-sm">
+                    <p id="footer-legal">ZEROSKIN is a brand of JoyMystery Limited</p>
+                    <p class="uppercase tracking-widest text-blue-500/60 font-bold">Powered by Zelex</p>
+                    <p>© 2026 ZEROSKIN. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                <img src="body-robot.jpg" alt="Humanoid Robot" class="w-full object-cover">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const content = {
+            en: {
+                navContact: "Contact Us",
+                heroTitle: "Soft Skin for <br><span class='accent-blue'>Real Robots</span>",
+                heroSub: "Hong Kong Premium Humanoid Robot Bionic Skin Solution Provider.",
+                tag1: "Bio Tech", tag2: "One-Stop Service",
+                partnerTitle: "Exclusive Strategic Partnership",
+                partnerDesc: "ZEROSKIN maintains an exclusive global strategic partnership with Zelex, a leading silicone factory specializing in biomimetic technology.",
+                list1: "✓ Mature highly realistic silicone facial fabrication technology.",
+                list2: "✓ End-to-end customization from prototype to mass production.",
+                specsTitle: "Technical Specifications",
+                specH1: "Hardness", specH2: "Temperature", specH3: "Thickness",
+                caseTag: "Success Case",
+                caseTitle: "AnyWit Robotics",
+                caseDesc: "We provided professional silicone skin solutions for high-degree-of-freedom facial expressions, proving our delivery capability for complex humanoid robots.",
+                footerContact: "Contact",
+                footerLegal: "ZEROSKIN is a brand of JoyMystery Limited"
+            },
+            zh: {
+                navContact: "聯繫我們",
+                heroTitle: "柔膚仿生 <br><span class='accent-blue'>機器真人</span>",
+                heroSub: "香港高端人形機器人仿生皮膚方案商",
+                tag1: "仿生科技", tag2: "一站式服務",
+                partnerTitle: "全球獨家戰略合作",
+                partnerDesc: "ZEROSKIN 與全球知名仿生矽膠工廠 Zelex 達成深度獨家戰略合作，依託十餘年工藝經驗。",
+                list1: "✓ 擁有成熟的高仿真矽膠面部製作工藝。",
+                list2: "✓ 提供從樣板開發到批量生產的全流程定制服務。",
+                specsTitle: "核心產品技術規格",
+                specH1: "硬度範圍", specH2: "耐溫性能", specH3: "厚度規格",
+                caseTag: "成功案例",
+                caseTitle: "無論科技 (AnyWit)",
+                caseDesc: "為高自由度面部表情機器人提供專業皮膚方案，實證我們在複雜結構下的交付能力。",
+                footerContact: "聯繫方式",
+                footerLegal: "ZEROSKIN 為 JoyMystery Limited 旗下品牌"
+            }
+        };
+
+        function setLang(lang) {
+            const t = content[lang];
+            document.getElementById('nav-contact').innerText = t.navContact;
+            document.getElementById('hero-title').innerHTML = t.heroTitle;
+            document.getElementById('hero-sub').innerText = t.heroSub;
+            document.getElementById('tag-1').innerText = t.tag1;
+            document.getElementById('tag-2').innerText = t.tag2;
+            document.getElementById('partner-title').innerText = t.partnerTitle;
+            document.getElementById('partner-desc').innerText = t.partnerDesc;
+            document.getElementById('list-1').innerText = t.list1;
+            document.getElementById('list-2').innerText = t.list2;
+            document.getElementById('specs-title').innerText = t.specsTitle;
+            document.getElementById('spec-h1').innerText = t.specH1;
+            document.getElementById('spec-h2').innerText = t.specH2;
+            document.getElementById('spec-h3').innerText = t.specH3;
+            document.getElementById('case-tag').innerText = t.caseTag;
+            document.getElementById('case-title').innerText = t.caseTitle;
+            document.getElementById('case-desc').innerText = t.caseDesc;
+            document.getElementById('footer-contact').innerText = t.footerContact;
+            document.getElementById('footer-legal').innerText = t.footerLegal;
+
+            // Update button styles
+            document.getElementById('btn-en').classList.toggle('lang-active', lang === 'en');
+            document.getElementById('btn-zh').classList.toggle('lang-active', lang === 'zh');
+        }
+    </script>
+</body>
+</html>
